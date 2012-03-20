@@ -22,10 +22,10 @@ public class PersonServiceTest {
   
     @Test
     public void testStatusUpdate() throws Exception {
-        Long id = personService.save(new Person()).getId();
+        Long personId = personService.save(new Person()).getId();
         
-        personService.updateStatus(id, STATUS);
-        Person person = personService.find(id);
+        personService.updateStatus(personId, STATUS);
+        Person person = personService.find(personId);
         assertEquals(STATUS, person.currentStatus().getEntry());
     }
 }
