@@ -33,7 +33,7 @@ public class Person {
     }
     
     public Status currentStatus() {
-        return Iterables.getOnlyElement(statusHistory);
+        return Iterables.getOnlyElement(current);
     }
     
 }
